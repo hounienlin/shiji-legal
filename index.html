@@ -5,39 +5,109 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>拾字</title>
 <link rel="icon" href="assets/app-icon.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;700&family=Noto+Sans+TC:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 <style>
-  :root { color-scheme: light; }
-  body { margin:0; padding:0; font-family:-apple-system,"PingFang TC",sans-serif; background:#faf6ed; color:#2b2620; }
-  main { max-width:720px; margin:0 auto; padding:56px 24px 80px; text-align:center; }
-  .icon { width:96px; height:96px; border-radius:22px; box-shadow:0 6px 20px rgba(178,58,46,0.25); margin-bottom:22px; }
-  h1 { font-size:28px; margin:0 0 8px; }
-  .tagline { color:#6b6459; font-size:15px; line-height:1.7; max-width:420px; margin:0 auto; }
-  .shots { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin:44px 0 8px; }
-  .shots img { width:180px; border-radius:18px; border:1px solid #e4ddce; box-shadow:0 8px 24px rgba(43,38,32,0.10); }
-  .links { margin-top:44px; display:flex; flex-direction:column; gap:12px; align-items:center; }
-  a.card { display:block; width:100%; max-width:320px; padding:14px 20px; background:#fffdf8; border:1px solid #e4ddce; border-radius:10px; color:#2b2620; text-decoration:none; font-weight:600; }
-  a.card:hover { border-color:#b23a2e; }
-  footer { color:#a89e8c; font-size:12px; margin-top:56px; }
+  main { text-align: center; padding-top: 72px; }
+  .eyebrow { justify-content: center; }
+  .icon {
+    width: 108px; height: 108px; border-radius: 24px;
+    box-shadow: 0 14px 34px rgba(178,58,46,0.22), 0 2px 6px rgba(43,38,32,0.08);
+    margin: 4px 0 26px;
+  }
+  h1 { font-size: 38px; }
+  .tagline {
+    color: var(--ink-soft); font-size: 16px; line-height: 1.85;
+    max-width: 460px; margin: 0 auto;
+  }
+  .pillars {
+    display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;
+    margin: 40px 0 8px;
+  }
+  .pillar {
+    background: var(--paper-card); border: 1px solid var(--line); border-radius: 12px;
+    padding: 14px 18px; width: 168px; text-align: left;
+  }
+  .pillar .mark {
+    font-family: "JetBrains Mono", monospace; font-size: 11px; color: var(--jade);
+    letter-spacing: .04em; text-transform: uppercase; margin-bottom: 6px; display:block;
+  }
+  .pillar .t { font-weight: 600; font-size: 14.5px; margin-bottom: 3px; }
+  .pillar .d { font-size: 12.5px; color: var(--ink-soft); line-height: 1.6; }
+
+  .shots { display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; margin: 56px 0 6px; }
+  .shot { width: 190px; }
+  .shot img {
+    width: 100%; border-radius: 20px; border: 1px solid var(--line);
+    box-shadow: 0 14px 30px rgba(43,38,32,0.12);
+    display: block;
+  }
+  .shot .cap {
+    margin-top: 12px; font-size: 12.5px; color: var(--ink-soft);
+    font-family: "JetBrains Mono", monospace; letter-spacing: .01em;
+  }
+
+  .links { margin-top: 68px; display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+  a.card-link {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 13px 26px; background: var(--paper-card); border: 1px solid var(--line);
+    border-radius: 100px; color: var(--ink); text-decoration: none; font-weight: 600; font-size: 14.5px;
+    transition: border-color .15s, transform .15s;
+  }
+  a.card-link:hover { border-color: var(--stamp); transform: translateY(-1px); }
 </style>
 </head>
 <body>
 <main>
+  <div class="eyebrow">拾字 · 裝置端 AI 英文單字學習</div>
   <img class="icon" src="assets/app-icon.png" alt="拾字 App 圖示">
-  <h1>拾字</h1>
-  <p class="tagline">裝置端 AI 字根拆解 × 圖像聯想記憶法，背單字不死記。完全離線運算，不需要網路，不需要註冊帳號。</p>
+  <h1>一個字，一個字，撿回來</h1>
+  <p class="tagline">
+    拾字用 AI 幫你拆解每個單字的字根字源，畫出一個好記的圖像聯想——
+    不是死背拼字，是先懂「為什麼是這個意思」。所有運算都在你的裝置上完成，
+    不連網路、不留紀錄。
+  </p>
+
+  <div class="pillars">
+    <div class="pillar">
+      <span class="mark">01</span>
+      <div class="t">字根拆解</div>
+      <div class="d">看懂單字是怎麼「組」出來的</div>
+    </div>
+    <div class="pillar">
+      <span class="mark">02</span>
+      <div class="t">圖像聯想</div>
+      <div class="d">一個畫面把發音、拼字、意思黏在一起</div>
+    </div>
+    <div class="pillar">
+      <span class="mark">03</span>
+      <div class="t">完全離線</div>
+      <div class="d">裝置端 AI 運算，資料不離開你的手機</div>
+    </div>
+  </div>
 
   <div class="shots">
-    <img src="assets/shot-stats.png" alt="學習統計畫面：連續打卡、成就徽章、字彙分布圖表">
-    <img src="assets/shot-quickuse.png" alt="馬上用畫面：搜尋任意單字並加入學習清單">
-    <img src="assets/shot-quiz.png" alt="考考測驗畫面：自由練習選擇題">
+    <div class="shot">
+      <img src="assets/shot-stats.png" alt="學習統計畫面：連續打卡、成就徽章、字彙分布圖表">
+      <div class="cap">學習統計 · 打卡與成就</div>
+    </div>
+    <div class="shot">
+      <img src="assets/shot-quickuse.png" alt="馬上用畫面：搜尋任意單字並加入學習清單">
+      <div class="cap">馬上用 · 任何字都能查</div>
+    </div>
+    <div class="shot">
+      <img src="assets/shot-quiz.png" alt="考考測驗畫面：自由練習選擇題">
+      <div class="cap">考考 · 自由練習</div>
+    </div>
   </div>
 
   <div class="links">
-    <a class="card" href="privacy.html">隱私權政策</a>
-    <a class="card" href="support.html">支援與常見問題</a>
+    <a class="card-link" href="privacy.html">隱私權政策</a>
+    <a class="card-link" href="support.html">支援與常見問題</a>
   </div>
 
-  <footer>拾字 · 2026</footer>
+  <footer class="page-footer">拾字 SHIJI · 2026 · 用心做一個不需要交出隱私的學習工具</footer>
 </main>
 </body>
 </html>

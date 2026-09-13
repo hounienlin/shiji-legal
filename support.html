@@ -5,45 +5,49 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>支援與常見問題 — 拾字</title>
 <link rel="icon" href="assets/app-icon.png">
-<style>
-  :root { color-scheme: light; }
-  body { margin:0; padding:0; font-family:-apple-system,"PingFang TC",sans-serif; background:#faf6ed; color:#2b2620; line-height:1.8; }
-  main { max-width:640px; margin:0 auto; padding:48px 24px 80px; }
-  a { color:#b23a2e; }
-  h1 { font-size:26px; margin-bottom:32px; }
-  h2 { font-size:18px; margin-top:32px; border-bottom:1px solid #e4ddce; padding-bottom:8px; }
-  p, li { font-size:15px; color:#2b2620; }
-  .back { display:inline-flex; align-items:center; gap:8px; margin-bottom:24px; font-size:14px; color:#6b6459; text-decoration:none; }
-  .back img { width:22px; height:22px; border-radius:6px; }
-  .contact { background:#fffdf8; border:1px solid #e4ddce; border-radius:10px; padding:16px 20px; margin-top:12px; }
-</style>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;700&family=Noto+Sans+TC:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <main>
   <a class="back" href="index.html"><img src="assets/app-icon.png" alt=""> 拾字</a>
-  <h1>支援與常見問題</h1>
 
-  <h2>聯絡我們</h2>
-  <div class="contact">
-    <p>有任何問題或建議，歡迎來信：<br>
-    <a href="mailto:hounienlin@gmail.com">hounienlin@gmail.com</a></p>
+  <div class="eyebrow">拾字 · 支援與常見問題</div>
+  <h1>卡關了嗎？我們親自回覆</h1>
+  <p class="lead">拾字還在持續打磨，遇到任何問題或想到什麼功能，直接寫信給我們——不是罐頭客服，是真人會看、會回。</p>
+
+  <div class="contact-card">
+    <div class="label">聯絡信箱</div>
+    <a href="mailto:hounienlin@gmail.com">hounienlin@gmail.com</a>
   </div>
 
-  <h2>常見問題</h2>
+  <h2><span class="no">FAQ</span> 常見問題</h2>
 
-  <p><strong>App 首次啟動為什麼要下載這麼久？</strong><br>
-  拾字的 AI 內容生成完全在你的裝置上運算，不依賴網路伺服器。首次啟動需要下載約 2GB 的
-  AI 模型檔案，下載完成後之後查詢單字就不需要網路連線了。</p>
+  <div class="faq">
+    <div class="q">App 首次啟動為什麼要下載這麼久？</div>
+    <div class="a">拾字的 AI 內容生成完全在你的裝置上運算，不依賴網路伺服器，也因此更保護你的隱私。首次啟動需要下載約 2GB 的 AI 模型檔案，下載完成後之後查詢單字就完全不需要網路連線了。</div>
+  </div>
 
-  <p><strong>我的學習資料會不會遺失？</strong><br>
-  你的單字本、複習記錄都存在裝置本機，換手機或重新安裝 App 前建議先確認資料備份方式
-  （目前版本尚未支援 iCloud 同步）。</p>
+  <div class="faq">
+    <div class="q">拾字需要網路才能用嗎？</div>
+    <div class="a">只有首次下載 AI 模型時需要網路。之後不管是查單字、複習、還是測驗，都可以在飛航模式下完全離線使用。</div>
+  </div>
 
-  <p><strong>拾字需要網路才能用嗎？</strong><br>
-  只有首次下載 AI 模型時需要網路，之後查詢單字、複習、測驗都可以完全離線使用。</p>
+  <div class="faq">
+    <div class="q">我的學習資料會不會遺失？</div>
+    <div class="a">你的單字本、複習紀錄都存在裝置本機，換手機或重新安裝 App 前，建議先確認你的資料備份方式（目前版本尚未支援 iCloud 同步）。</div>
+  </div>
 
-  <h2>意見回饋</h2>
-  <p>拾字仍在持續改進中，歡迎透過上方信箱告訴我們你想看到的功能或遇到的問題。</p>
+  <div class="faq">
+    <div class="q">遇到 bug 或內容生成怪怪的，怎麼回報？</div>
+    <div class="a">直接來信告訴我們是哪個單字、大概什麼情況，附個截圖更好——AI 生成內容偶爾會出錯，你的回報對我們很有幫助。</div>
+  </div>
+
+  <h2><span class="no">···</span> 意見回饋</h2>
+  <p>拾字仍在持續改進中，想看到什麼新功能、覺得哪裡不順手，都歡迎透過上方信箱告訴我們。</p>
+
+  <footer class="page-footer">拾字 SHIJI · 支援與常見問題</footer>
 </main>
 </body>
 </html>
